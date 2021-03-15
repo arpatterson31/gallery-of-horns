@@ -1,4 +1,7 @@
 import React from 'react';
+import Header from './header';
+import Main from './main';
+import Footer from './footer';
 
 class APP extends React.Component {
  render() {
