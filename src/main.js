@@ -6,7 +6,9 @@ class Main extends React.Component{
   render () {
     return (
       <div id="main">
-        <HornedBeasts />
+        <HornedBeasts url={} title={} description={} />
+        <HornedBeasts url={} title={} description={} />
+        <HornedBeasts url={} title={} description={} />
       </div>
     )
   }
