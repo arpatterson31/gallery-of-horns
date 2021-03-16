@@ -9,12 +9,17 @@ class HornedBeasts extends React.Component{
     }
   }
 
+  clickYourFavorite = () => {
+    this.setState({numberOfClicks: this.state.numberOfClicks + 1});
+  }
+
   render() {
 
     return (
       <>
         <h2>{this.props.title}</h2>
-        <img src={this.props.url} alt={this.props.description} title={this.props.title} />
+        <div>💖 {this.state.numberOfClicks}</div>
+        <img onClick={this.clickYourFavorite} src={this.props.url} alt={this.props.description} title={this.props.title} />
         <p>{this.props.description}</p>
       </>
     );
