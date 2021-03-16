@@ -71,10 +71,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Time Estimate Lab: Class 02
 
-- Number and name of feature: Display Images
-- Estimate of time needed to complete: __60minutes___
-- Start time: __3:34pm___
-- Finish time: __4:03pm___
-- Actual time needed to complete: __30 minutes___
+- Number and name of feature: #1 Display Images
+  - Estimate of time needed to complete: __60minutes___
+  - Start time: __3:34pm___
+  - Finish time: __4:03pm___
+  - Actual time needed to complete: __30 minutes___
 
-
+- Number and name of feature: #2 Allow Users to vote for their favorite beast
+  - Estimate of time needed to complete: __60 minutes___
+  - Start time: _4:06pm__
+  - Finish time: __4:23pm___
+  - Actual time needed to complete: __16 minutes___
