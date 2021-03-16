@@ -2,6 +2,13 @@ import React from 'react';
 import Data from '../data.json';
 
 class HornedBeasts extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      numberOfClicks: 0
+    }
+  }
+
   render() {
 
     return (
