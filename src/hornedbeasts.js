@@ -1,8 +1,9 @@
 import React from 'react';
-
+import Data from '../data.json';
 
 class HornedBeasts extends React.Component{
   render() {
+
     return (
       <>
         <h2>{this.props.title}</h2>
