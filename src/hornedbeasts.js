@@ -7,20 +7,21 @@ class HornedBeasts extends React.Component{
     super(props);
     this.state = {
       numberOfClicks: 0
-      
+
     }
   }
 
   clickYourFavorite = () => {
     this.setState({numberOfClicks: this.state.numberOfClicks + 1});
+    this.props.renderModal();
   }
 
   render() {
 
     return (
       <>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" onClick={this.clickYourFavorite} src={this.props.url} alt={this.props.description} title={this.props.title} />
+        <Card style={{ width: '18rem' }} onClick={this.clickYourFavorite}>
+          <Card.Img variant="top"  src={this.props.url} alt={this.props.description} title={this.props.title} />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>💖 {this.state.numberOfClicks}</Card.Text>
