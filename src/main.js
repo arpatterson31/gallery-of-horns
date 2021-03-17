@@ -9,7 +9,7 @@ class Main extends React.Component {
     return (
       <div id="main">
         <CardGroup>
-          {BeastData.map((beast, index) => (
+          {{BeastData}.map((beast, index) => (
             <div key={index}>
               <HornedBeasts
                 url={beast.image_url}
