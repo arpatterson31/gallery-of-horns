@@ -21,8 +21,10 @@ class App extends React.Component {
   }
 
   // function for hide modal 
+  closeModal = () => {
+    this.setState({show:false});
+  }
 
-  
   render() {
     return(
       <div id="app">
@@ -38,6 +40,7 @@ class App extends React.Component {
                 url={beast.image_url}
                 title={beast.title}
                 description={beast.description}
+                closeModal={this.closeModal}
               />
             </div>
           ))

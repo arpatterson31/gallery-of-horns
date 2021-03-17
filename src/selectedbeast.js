@@ -10,15 +10,14 @@ class SelectedBeast extends React.Component {
       
     }
   }
-
-
+  
   render() {
     return (
       // render modal
       <div id="beast-modal">
         <Modal
           show={this.props.show}
-          onHide={this.props.handleClose}
+          onHide={this.props.closeModal}
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
           centered
@@ -33,7 +32,7 @@ class SelectedBeast extends React.Component {
             <p>{this.props.description}</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.props.handleClose}>Close</Button>
+            <Button onClick={this.props.closeModal}>Close</Button>
           </Modal.Footer>
         </Modal>
       </div>

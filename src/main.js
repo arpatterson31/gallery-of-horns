@@ -1,19 +1,12 @@
 import React from 'react';
 import HornedBeasts from './hornedbeasts';
-import BeastData from './data.json';
+// import BeastData from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardGroup from 'react-bootstrap/CardGroup';
 
 class Main extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-     
-    }
-  }
 
-
-
+  
   render() {
     return (
       <div id="main">
