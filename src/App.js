@@ -7,12 +7,28 @@ import SelectedBeast from './selectedbeast'
 import BeastData from './data.json';
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+
+    }
+  }
+
   render() {
     return(
       <div id="app">
         <Header />
         <Main dataArray={BeastData}/>
-        <SelectedBeast />
+        {{BeastData}.map((beast, index) => (
+            <div key={index}>
+              <SelectedBeast
+                url={beast.image_url}
+                title={beast.title}
+                description={beast.description}
+              />
+            </div>
+          ))
+          }
         <Footer />
       </div>
     );

@@ -5,6 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardGroup from 'react-bootstrap/CardGroup';
 
 class Main extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      gallery: BeastData
+    }
+  }
+
+  
+
   render() {
     return (
       <div id="main">
