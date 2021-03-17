@@ -8,17 +8,17 @@ class Main extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      gallery: BeastData
+     
     }
   }
 
-  
+
 
   render() {
     return (
       <div id="main">
         <CardGroup>
-          {{BeastData}.map((beast, index) => (
+          {this.props.dataArray.map((beast, index) => (
             <div key={index}>
               <HornedBeasts
                 url={beast.image_url}

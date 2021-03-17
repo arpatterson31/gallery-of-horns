@@ -7,6 +7,7 @@ class HornedBeasts extends React.Component{
     super(props);
     this.state = {
       numberOfClicks: 0
+      
     }
   }
 
