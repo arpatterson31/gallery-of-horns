@@ -30,8 +30,9 @@ class App extends React.Component {
   // function for updating state of selected horns for dropdown
   updateHornValue = (e) => this.setState({selectedHornValue: +e.target.value});
 
+
   // notes 
-// {dataArray.filter((beast) => beast.horns === {this.state.selectedHornValue})} -- this needs to go somewhere.. not sure where
+// {dataArray.filter((beast) => beast.horns === {this.state.selectedHornValue})} -- this needs to maybe go here? have it on main
 
   render() {
     return(
@@ -40,13 +41,13 @@ class App extends React.Component {
 
         <HornDropdown 
           updateHornValue={this.updateHornValue}
-          selectedHornValue={this.state.selectedHornValue}
-
+          // horns={this.state.dataArray[beast.horns]}
         />
 
         <Main 
           dataArray={this.state.dataArray}
           openBeastModal={this.openBeastModal}
+          selectedHornValue={this.state.selectedHornValue}
         />
         <SelectedBeast
                 show={this.state.show}

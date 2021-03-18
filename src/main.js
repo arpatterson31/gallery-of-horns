@@ -23,7 +23,7 @@ class Main extends React.Component {
 
 
         <CardDeck>
-          {this.props.dataArray.map((beast, index) => (
+          {this.props.dataArray.filter((beast) => beast.horns >= this.props.selectedHornValue).map((beast, index) => (
             <div key={index}>
               <HornedBeasts
                 index={index}
