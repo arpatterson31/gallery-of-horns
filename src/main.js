@@ -3,12 +3,17 @@ import HornedBeasts from './hornedbeasts';
 // import BeastData from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardDeck from 'react-bootstrap/CardDeck';
+import Dropdown from './dropdown';
+
 
 class Main extends React.Component {
 
   render() {
     return (
       <div id="main">
+        <Dropdown>
+          
+        </Dropdown>
         <CardDeck>
           {this.props.dataArray.map((beast, index) => (
             <div key={index}>
