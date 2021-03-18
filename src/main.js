@@ -1,19 +1,34 @@
 import React from 'react';
 import HornedBeasts from './hornedbeasts';
-// import BeastData from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardDeck from 'react-bootstrap/CardDeck';
-import Dropdown from './dropdown';
+import HornDropdown from './hornDropdown';
 
 
 class Main extends React.Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      selectedHornValue: ""
+    }
+  }
+
+  updateHornValue = (e) => this.setState({selectedHornValue: e.target.value});
+
+// notes 
+// {this.props.dataArray.filter((beast) => beast.horns === {this.state.selectedHornValue})} -- this needs to go somewhere.. not sure where
+
   render() {
     return (
       <div id="main">
-        <Dropdown>
-          
-        </Dropdown>
+
+        <HornDropdown 
+          updateHornValue={this.updateHornValue}
+          selectedHornValue={this.state.selectedHornValue}
+
+        />
+
         <CardDeck>
           {this.props.dataArray.map((beast, index) => (
             <div key={index}>
