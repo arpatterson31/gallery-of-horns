@@ -38,20 +38,6 @@ class App extends React.Component {
                 closeModal={this.closeModal}
                 selectedBeast={this.state.selectedBeast}
         />
-        {/* {BeastData.map((beast, index) => (
-            <div key={index}>
-              <SelectedBeast
-                dataArray={this.state.dataArray}
-                url={beast.image_url}
-                title={beast.title}
-                description={beast.description}
-                show={this.state.show}
-                closeModal={this.closeModal}
-                selectedBeast={this.state.selectedBeast}
-              />
-            </div>
-          ))
-        } */}
         <Footer />
       </div>
     );

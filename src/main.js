@@ -6,10 +6,6 @@ import CardGroup from 'react-bootstrap/CardGroup';
 
 class Main extends React.Component {
 
-  renderModal = () => {
-    this.props.openBeastModal();
-  }
-
   render() {
     return (
       <div id="main">
@@ -21,7 +17,7 @@ class Main extends React.Component {
                 url={beast.image_url}
                 title={beast.title}
                 description={beast.description}
-                renderModal={this.renderModal}
+                openBeastModal={this.props.openBeastModal}
               />
             </div>
           ))
