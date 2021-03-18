@@ -94,6 +94,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Number and name of feature: #1 Modal
   - Estimate of time needed to complete: 2-3 hrs
   - Start time: 1:30pm
-  - Finish time:
-  - Actual time needed to complete: 
+  - Finish time: 5:33pm with the modal. I went back in and added some styling
+  - Actual time needed to complete: 4 hours
   
