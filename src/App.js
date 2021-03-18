@@ -14,7 +14,7 @@ class App extends React.Component {
       show: false,
       dataArray: BeastData,
       selectedBeast: {},
-      selectedHornValue: 0
+      selectedHornValue: null
     }
   }
 
@@ -28,8 +28,10 @@ class App extends React.Component {
   }
 
   // function for updating state of selected horns for dropdown
-  updateHornValue = (e) => this.setState({selectedHornValue: +e.target.value});
-
+  updateHornValue = (e) => {
+    console.log('hey', this.state.selectedHornValue);
+    this.setState({selectedHornValue: e.target.value});
+  }
 
   // notes 
 // {dataArray.filter((beast) => beast.horns === {this.state.selectedHornValue})} -- this needs to maybe go here? have it on main
@@ -41,7 +43,7 @@ class App extends React.Component {
 
         <HornDropdown 
           updateHornValue={this.updateHornValue}
-          // horns={this.state.dataArray[beast.horns]}
+          // horns={this.state.dataArray.horns}
         />
 
         <Main 

@@ -13,17 +13,22 @@ class Main extends React.Component {
 
   //   }
   // }
+  
+  // filter function assign my filter to variable out beasts then map 
+  // {this.props.dataArray.filter((beast) => beast.horns === this.props.selectedHornValue)
+ 
 
-
-
+  
   render() {
     return (
+
+      // if statement with my var filter function  if !null .map filtered else null .map all
       <div id="main">
 
 
 
         <CardDeck>
-          {this.props.dataArray.filter((beast) => beast.horns >= this.props.selectedHornValue).map((beast, index) => (
+          {filterVariable.map((beast, index) => (
             <div key={index}>
               <HornedBeasts
                 index={index}
