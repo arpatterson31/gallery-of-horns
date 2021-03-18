@@ -9,9 +9,9 @@ class HornDropdown extends React.Component {
       <>
         <Dropdown>
 
-          <DropdownButton id="dropdown-item-button" title="Number of Horns">
+          <DropdownButton id="dropdown-item-button" title="Number of Horns" onSelect={this.props.updateHornValue}>
             {/* <Dropdown.ItemText>Dropdown item text</Dropdown.ItemText> */}
-            <Dropdown.Item as="button" onChange={this.props.updateHornValue}>{this.props.horns}</Dropdown.Item>
+            <Dropdown.Item as="button" >{this.props.horns}</Dropdown.Item>
             {/* <Dropdown.Item as="button">2</Dropdown.Item>
             <Dropdown.Item as="button">3</Dropdown.Item>
             <Dropdown.Item as="button">100</Dropdown.Item> */}

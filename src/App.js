@@ -5,6 +5,7 @@ import Footer from './footer';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SelectedBeast from './selectedbeast';
 import BeastData from './data.json';
+import HornDropdown from './hornDropdown';
 
 class App extends React.Component {
   constructor(props){
@@ -12,7 +13,8 @@ class App extends React.Component {
     this.state = {
       show: false,
       dataArray: BeastData,
-      selectedBeast: {}
+      selectedBeast: {},
+      selectedHornValue: 0
     }
   }
 
@@ -25,10 +27,23 @@ class App extends React.Component {
     this.setState({show:false});
   }
 
+  // function for updating state of selected horns for dropdown
+  updateHornValue = (e) => this.setState({selectedHornValue: +e.target.value});
+
+  // notes 
+// {dataArray.filter((beast) => beast.horns === {this.state.selectedHornValue})} -- this needs to go somewhere.. not sure where
+
   render() {
     return(
       <div id="app">
         <Header />
+
+        <HornDropdown 
+          updateHornValue={this.updateHornValue}
+          selectedHornValue={this.state.selectedHornValue}
+
+        />
+
         <Main 
           dataArray={this.state.dataArray}
           openBeastModal={this.openBeastModal}
