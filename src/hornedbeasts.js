@@ -20,13 +20,15 @@ class HornedBeasts extends React.Component{
 
     return (
       <>
-        <Card style={{ width: '18rem' }} onClick={this.clickYourFavorite}>
+        <Card style={{ width: '18rem' }} text='dark' border='info' onClick={this.clickYourFavorite}>
           <Card.Img variant="top"  src={this.props.url} alt={this.props.description} title={this.props.title} />
           <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
-            <Card.Text>💖 {this.state.numberOfClicks}</Card.Text>
+            <Card.Title >{this.props.title}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
           </Card.Body>
+          <Card.Footer>
+            <Card.Text >💖 {this.state.numberOfClicks}</Card.Text>
+          </Card.Footer>
         </Card>
       </>
     );

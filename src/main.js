@@ -2,14 +2,14 @@ import React from 'react';
 import HornedBeasts from './hornedbeasts';
 // import BeastData from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardGroup from 'react-bootstrap/CardGroup';
+import CardDeck from 'react-bootstrap/CardDeck';
 
 class Main extends React.Component {
 
   render() {
     return (
       <div id="main">
-        <CardGroup>
+        <CardDeck>
           {this.props.dataArray.map((beast, index) => (
             <div key={index}>
               <HornedBeasts
@@ -22,7 +22,7 @@ class Main extends React.Component {
             </div>
           ))
           }
-        </CardGroup>
+        </CardDeck>
       </div>
     );
   }
