@@ -72,20 +72,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Time Estimate Lab: Class 02
 
 - Number and name of feature: #1 Display Images
-  - Estimate of time needed to complete: __60minutes___
-  - Start time: __3:34pm___
-  - Finish time: __4:03pm___
-  - Actual time needed to complete: __30 minutes___
+  - Estimate of time needed to complete: 60minutes
+  - Start time: 3:34pm
+  - Finish time: 4:03pm
+  - Actual time needed to complete: 30 minutes
 
 - Number and name of feature: #2 Allow Users to vote for their favorite beast
-  - Estimate of time needed to complete: __60 minutes___
-  - Start time: _4:06pm__
-  - Finish time: __4:23pm___
-  - Actual time needed to complete: __16 minutes___
+  - Estimate of time needed to complete: 60 minutes
+  - Start time: 4:06pm
+  - Finish time: 4:23pm
+  - Actual time needed to complete: 16 minutes
 
 - Number and name of feature: #3 Bootstrap
-  - Estimate of time needed to complete: _30 minutes__
-  - Start time: __4:41pm_
-  - Finish time: __4:58pm_
-  - Actual time needed to complete: __17 min_
+  - Estimate of time needed to complete: 30 minutes
+  - Start time: 4:41pm
+  - Finish time: 4:58pm
+  - Actual time needed to complete: 17 min
+
+### Time Estimate Lab: Class 03
+
+- Number and name of feature: #1 Modal
+  - Estimate of time needed to complete: 2-3 hrs
+  - Start time: 1:30pm
+  - Finish time: 5:33pm with the modal. I went back in and added some styling
+  - Actual time needed to complete: 4 hours
   
