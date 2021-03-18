@@ -16,7 +16,7 @@ class App extends React.Component {
     }
   }
 
-  selectTheBeast = (index) => {
+  openBeastModal = (index) => {
     this.setState({selectedBeast: this.state.dataArray[index], show:true});
   }
 
@@ -31,20 +31,27 @@ class App extends React.Component {
         <Header />
         <Main 
           dataArray={this.state.dataArray}
-          selectTheBeast={this.selectTheBeast}
+          openBeastModal={this.openBeastModal}
         />
-
-        {{BeastData}.map((beast, index) => (
+        <SelectedBeast
+                show={this.state.show}
+                closeModal={this.closeModal}
+                selectedBeast={this.state.selectedBeast}
+        />
+        {/* {BeastData.map((beast, index) => (
             <div key={index}>
               <SelectedBeast
+                dataArray={this.state.dataArray}
                 url={beast.image_url}
                 title={beast.title}
                 description={beast.description}
+                show={this.state.show}
                 closeModal={this.closeModal}
+                selectedBeast={this.state.selectedBeast}
               />
             </div>
           ))
-          }
+        } */}
         <Footer />
       </div>
     );

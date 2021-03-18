@@ -7,7 +7,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 class Main extends React.Component {
 
   renderModal = () => {
-    this.props.selectTheBeast();
+    this.props.openBeastModal();
   }
 
   render() {
@@ -17,6 +17,7 @@ class Main extends React.Component {
           {this.props.dataArray.map((beast, index) => (
             <div key={index}>
               <HornedBeasts
+                index={index}
                 url={beast.image_url}
                 title={beast.title}
                 description={beast.description}
