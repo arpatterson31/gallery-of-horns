@@ -25,6 +25,7 @@ class HornedBeasts extends React.Component{
           <Card.Body>
             <Card.Title >{this.props.title}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
+            <Card.Text><p>A {this.props.keyword} has {this.props.horns} horn(s)</p></Card.Text>
           </Card.Body>
           <Card.Footer>
             <Card.Text >💖 {this.state.numberOfClicks}</Card.Text>
