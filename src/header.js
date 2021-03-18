@@ -10,7 +10,7 @@ class Header extends React.Component {
     return (
       <>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand >🦄 Gallery of Horns 🦄</Navbar.Brand>
+          <Navbar.Brand ><h2>🦄 Gallery of Horns 🦄</h2></Navbar.Brand>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-info">Search</Button>
