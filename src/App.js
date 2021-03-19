@@ -51,7 +51,6 @@ class App extends React.Component {
 
         <HornDropdown 
           updateHornValue={this.updateHornValue}
-          // horns={this.state.dataArray.horns}
         />
 
         <Main 
