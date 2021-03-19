@@ -13,7 +13,7 @@ class HornedBeasts extends React.Component{
 
   clickYourFavorite = () => {
     this.setState({numberOfClicks: this.state.numberOfClicks + 1});
-    this.props.openBeastModal(this.props.index);
+    this.props.openBeastModal(this.props.title);
   }
 
   render() {
