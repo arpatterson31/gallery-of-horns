@@ -17,11 +17,7 @@ class HornDropdown extends React.Component {
             <Dropdown.Item as="button" onClick={this.props.updateHornValue} value={'All'}>All</Dropdown.Item>
           </DropdownButton>
 
-
-        </Dropdown>
-
-
-       
+        </Dropdown>       
       </>
     );
   }

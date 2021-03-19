@@ -30,7 +30,10 @@ class App extends React.Component {
   // function for updating state of selected horns for dropdown
   updateHornValue = (e) => {
     // console.log('hey', this.state.selectedHornValue);
+    e.preventDefault();
     this.setState({selectedHornValue: e.target.value});
+    // this.setState({selectedBeast: this.state.dataArray[index]})
+    
   }
 
   render() {
