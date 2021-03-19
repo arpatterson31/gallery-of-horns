@@ -7,28 +7,24 @@ import CardDeck from 'react-bootstrap/CardDeck';
 
 class Main extends React.Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-
-  //   }
-  // }
-  
   // filter function assign my filter to variable out beasts then map 
-  // {this.props.dataArray.filter((beast) => beast.horns === this.props.selectedHornValue)
- 
+  // if statement with my var filter function  if all map hornedbeasts else .filter
 
-  
   render() {
+
+    const dataArray = this.props.dataArray;
+    const filteredHorns = dataArray.filter((beast) => {
+      if (this.props.selectedHornValue === "All") {
+        return beast;
+      } else {
+        return beast.horns === +this.props.selectedHornValue;
+      }
+    });
+
     return (
-
-      // if statement with my var filter function  if !null .map filtered else null .map all
-      <div id="main">
-
-
-
+      <div>
         <CardDeck>
-          {filterVariable.map((beast, index) => (
+          {filteredHorns.map((beast, index) => (
             <div key={index}>
               <HornedBeasts
                 index={index}
@@ -40,12 +36,11 @@ class Main extends React.Component {
                 openBeastModal={this.props.openBeastModal}
               />
             </div>
-          ))
-          }
+          ))}
         </CardDeck>
-      </div>
+      </div>  
     );
   }
-}
 
+}
 export default Main;
