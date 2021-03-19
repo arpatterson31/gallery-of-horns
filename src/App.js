@@ -13,13 +13,15 @@ class App extends React.Component {
     this.state = {
       show: false,
       dataArray: BeastData,
+      filteredHorns: BeastData,
       selectedBeast: {},
       selectedHornValue: "All"
     }
   }
 
-  openBeastModal = (index) => {
-    this.setState({selectedBeast: this.state.dataArray[index], show:true});
+  openBeastModal = (name) => {
+    const selectedBeast = BeastData.find(beast => beast.title === name);
+    this.setState({selectedBeast, show:true});
   }
 
   // function for hide modal 
@@ -29,11 +31,17 @@ class App extends React.Component {
 
   // function for updating state of selected horns for dropdown
   updateHornValue = (e) => {
-    // console.log('hey', this.state.selectedHornValue);
     e.preventDefault();
     this.setState({selectedHornValue: e.target.value});
-    // this.setState({selectedBeast: this.state.dataArray[index]})
     
+    const filteredHorns = this.state.dataArray.filter((beast) => {
+      if (e.target.value === "All") {
+        return beast;
+      } else {
+        return beast.horns === +e.target.value;
+      }
+    });
+    this.setState({filteredHorns});
   }
 
   render() {
@@ -48,6 +56,7 @@ class App extends React.Component {
 
         <Main 
           dataArray={this.state.dataArray}
+          filteredHorns={this.state.filteredHorns}
           openBeastModal={this.openBeastModal}
           selectedHornValue={this.state.selectedHornValue}
         />

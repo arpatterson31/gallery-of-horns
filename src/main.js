@@ -12,19 +12,19 @@ class Main extends React.Component {
 
   render() {
 
-    const dataArray = this.props.dataArray;
-    const filteredHorns = dataArray.filter((beast) => {
-      if (this.props.selectedHornValue === "All") {
-        return beast;
-      } else {
-        return beast.horns === +this.props.selectedHornValue;
-      }
-    });
+    // const dataArray = this.props.dataArray;
+    // const filteredHorns = dataArray.filter((beast) => {
+    //   if (this.props.selectedHornValue === "All") {
+    //     return beast;
+    //   } else {
+    //     return beast.horns === +this.props.selectedHornValue;
+    //   }
+    // });
 
     return (
       <div>
         <CardDeck>
-          {filteredHorns.map((beast, index) => (
+          {this.props.filteredHorns.map((beast, index) => (
             <div key={index}>
               <HornedBeasts
                 index={index}
